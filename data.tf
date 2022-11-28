@@ -43,7 +43,6 @@ data "aws_availability_zones" "available" {
 #  }
 #}
 
-
 #data "aws_vpn_gateway" "selected" {
 #  filter {
 #    name   = "tag:Name"
