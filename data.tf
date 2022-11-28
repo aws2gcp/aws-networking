@@ -7,7 +7,7 @@ data "aws_caller_identity" "current" {
 }
 data "aws_vpc" "vpc_id" {
   id = var.vpc.create == true ? module.vpc[0].id : var.vpc.id
-}ß
+}
 data "aws_subnets" "public" {
   filter {
     name   = "vpc-id"
