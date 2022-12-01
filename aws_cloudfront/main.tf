@@ -1,6 +1,6 @@
 # Create CloudFront Distribution
 module "cloudfront" {
-  source              = "github.com/jeheyer/terraform-modules//aws_cloudfront_distribution/"
+  source              = "../modules/aws_cloudfront_distribution/"
   domain_names        = var.domain_names
   origins             = var.origins
   behaviors           = var.behaviors
@@ -15,7 +15,7 @@ module "cloudfront" {
 
 # Create CNAME in Route 53
 module "route53_cname" {
-  source      = "github.com/jeheyer/terraform-modules//aws_route53_record/"
+  source      = "../modules/aws_route53_record/"
   dns_zone_id = var.dns_zone_id
   name        = var.name
   type        = "CNAME"
